@@ -1,16 +1,13 @@
+import { Logo } from "../component";
 const About = () => {
   return (
     <>
       <div className="flex flex-wrap gap-2 sm:gap-x-6 justify-center items-center">
         <h1 className=" text-4xl font-bold leading-none tracking-tight sm:text-6xl ">
-          We love
+          Trust
         </h1>
-        <div className="stats bg-primary shadow">
-          <div className="stat">
-            <div className="stat-title text-primary-content text-4xl font-bold tracking-widest">
-              comfy
-            </div>
-          </div>
+        <div className=" w-36 pt-2 grid place-items-center">
+          <Logo />
         </div>
       </div>
 

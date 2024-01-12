@@ -20,3 +20,6 @@ export { default as CartTotals } from "./CartTotals";
 export { default as CheckoutForm } from "./CheckoutForm";
 export { default as OrdList } from "./OrdList";
 export { default as ComplexPaginationContainer } from "./ComplexPaginationContainer";
+export { default as Logo } from "./Logo";
+export { default as PartnersContainer } from "./PartnersContainer";
+export { default as Partner } from "./Partner";

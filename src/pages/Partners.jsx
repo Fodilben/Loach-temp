@@ -1,4 +1,10 @@
+import { SectionTitle, PartnersContainer } from "../component";
 const Partners = () => {
-  return <div>Partners</div>;
+  return (
+    <div>
+      <SectionTitle text="our partners" />
+      <PartnersContainer />
+    </div>
+  );
 };
 export default Partners;

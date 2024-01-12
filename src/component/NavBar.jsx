@@ -3,7 +3,7 @@ import { useState } from "react";
 import { BsCart3, BsMoonFill, BsSunFill } from "react-icons/bs";
 import { FaBarsStaggered } from "react-icons/fa6";
 import { NavLink } from "react-router-dom";
-import { NavLinks } from "../component";
+import { NavLinks, Logo } from "../component";
 import { useDispatch, useSelector } from "react-redux";
 import { ToggleThem } from "../features/user/userSlice";
 
@@ -19,12 +19,11 @@ const NavBar = () => {
     <nav className="bg-base-200">
       <div className=" align-element navbar">
         <div className="navbar-start">
-          <NavLink
-            className="hidden lg:flex btn btn-primary text-3xl items-center"
-            to="/"
-          >
-            C
-          </NavLink>
+          <div className=" w-32">
+            <NavLink className="hidden lg:flex  items-center" to="/">
+              <Logo />
+            </NavLink>
+          </div>
           <div className="dropdown  ">
             <label tabIndex={0} className="btn btn-ghost lg:hidden">
               <FaBarsStaggered className=" h-6 w-6" />
