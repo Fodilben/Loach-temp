@@ -27,6 +27,7 @@ export const loader =
   async ({ request }) => {
     const url = new URL(request.url);
     const params = Object.fromEntries([...url.searchParams.entries()]);
+    
     const response = await queryClient.ensureQueryData(
       allProductsQuery(params)
     );

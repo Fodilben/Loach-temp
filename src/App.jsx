@@ -11,6 +11,7 @@ import {
   LoginPage,
   Checkout,
   Orders,
+  Partners,
 } from "./pages";
 import { ErrorElement } from "./component";
 //loaders
@@ -51,6 +52,7 @@ const router = createBrowserRouter([
       },
       { path: "about", element: <About /> },
       { path: "cart", element: <Cart /> },
+      { path: "partners", element: <Partners /> },
       {
         path: "products",
         element: <Products />,

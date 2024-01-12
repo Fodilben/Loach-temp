@@ -9,3 +9,4 @@ export { default as LoginPage } from "./LoginPage";
 export { default as Register } from "./Register";
 export { default as Checkout } from "./Checkout";
 export { default as Orders } from "./Orders";
+export { default as Partners } from "./Partners";

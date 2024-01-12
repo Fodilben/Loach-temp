@@ -1,4 +1,5 @@
 import { useLoaderData, Link } from "react-router-dom";
+import { FormaPrice } from "../utils";
 
 const ProductsGrid = () => {
   const { products } = useLoaderData();
@@ -8,7 +9,7 @@ const ProductsGrid = () => {
       {products.map((product) => {
         const { title, price, image } = product.attributes;
         const id = product.id;
-
+        const formPrice = FormaPrice(price);
         return (
           <Link
             key={id}
@@ -24,7 +25,7 @@ const ProductsGrid = () => {
             </figure>
             <div className="card-body items-center text-center">
               <h2 className=" card-title tracking-wider capitalize">{title}</h2>
-              <span className="text-secondary">${price}</span>
+              <span className="text-secondary">{formPrice}</span>
             </div>
           </Link>
         );
