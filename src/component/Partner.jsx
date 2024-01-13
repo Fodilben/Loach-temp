@@ -1,5 +1,6 @@
 import { CiLocationOn } from "react-icons/ci";
-const Partner = ({ img, name, owner, place }) => {
+import { Link } from "react-router-dom";
+const Partner = ({ img, name, owner, place, jps }) => {
   return (
     <div className="card card-side  shadow-xl max-w-2xl mt-4 ">
       <figure>
@@ -13,7 +14,9 @@ const Partner = ({ img, name, owner, place }) => {
           <p className=" float-right  text-xs">{place}</p>
         </div>
         <div className="card-actions justify-end">
-          <button className="btn btn-primary">view</button>
+          <Link to={jps} target="_blank" rel="noopener noreferrer">
+            <button className="btn btn-primary">view</button>
+          </Link>
         </div>
       </div>
     </div>

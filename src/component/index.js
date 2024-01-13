@@ -25,3 +25,4 @@ export { default as PartnersContainer } from "./PartnersContainer";
 export { default as Partner } from "./Partner";
 export { default as CardContainer } from "./CardContainer";
 export { default as Card } from "./Card";
+export { default as PartnersIcon } from "./PartnersIcon";

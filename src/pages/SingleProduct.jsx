@@ -2,9 +2,8 @@ import { useLoaderData, Link } from "react-router-dom";
 import { useState } from "react";
 import { CustomFetch, FormaPrice, generateOpion } from "../utils";
 import { useDispatch } from "react-redux";
+import { PartnersIcon } from "../component";
 import { addItem } from "../features/cart/cartSlice";
-import { QueryClient } from "@tanstack/react-query";
-
 const singleQuery = (id) => {
   return {
     queryKey: ["single", id],
@@ -19,6 +18,11 @@ export const loader =
     const product = response.data.data;
     return { product };
   };
+const checkfn = (product) => {
+  const array = JSON.parse(localStorage.getItem("featured") || []);
+  const isObjectInArray = array.some((obj) => obj.id === product.id);
+  return isObjectInArray;
+};
 const SingleProduct = () => {
   const [amount, setAmount] = useState(1);
   const { product } = useLoaderData();
@@ -56,6 +60,7 @@ const SingleProduct = () => {
           </li>
         </ul>
       </div>
+      {checkfn(product) && <PartnersIcon />}
       <div className=" mt-6 grid gap-y-8 lg:grid-cols-2  lg:gap-x-16">
         <img
           src={image}
@@ -67,7 +72,7 @@ const SingleProduct = () => {
           <h4 className=" font-bold text-xl text-neutral-content mt-2 ">
             {company}
           </h4>
-          <p className=" text-xl mt-3">${dallorPrice}</p>
+          <p className=" text-xl mt-3">{dallorPrice}</p>
           <p className=" mt-6 leading-8 ">{description}</p>
           <div className=" mt-6">
             <h3 className="text-md font-medium tracking-wider capitalize">

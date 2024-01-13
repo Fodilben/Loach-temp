@@ -26,6 +26,9 @@ const About = () => {
           beatae eos, repudiandae neque.
         </div>
         <div className="hidden md:block">
+          <h1 className="mb-8 font-bold sm:text-2xl md:text-3xl">
+            Partners stores:
+          </h1>
           <img src={map} alt="map" />
         </div>
       </div>

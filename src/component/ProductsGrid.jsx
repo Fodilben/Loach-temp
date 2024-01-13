@@ -2,7 +2,7 @@ import { useLoaderData, Link } from "react-router-dom";
 import { FormaPrice } from "../utils";
 
 const ProductsGrid = () => {
-  const { products } = useLoaderData();
+  const { products, param } = useLoaderData();
 
   return (
     <div className="pt-12 grid gap-4 md:grid-cols-2 lg:grid-cols-3 ">
@@ -10,6 +10,7 @@ const ProductsGrid = () => {
         const { title, price, image } = product.attributes;
         const id = product.id;
         const formPrice = FormaPrice(price);
+
         return (
           <Link
             key={id}
