@@ -23,3 +23,5 @@ export { default as ComplexPaginationContainer } from "./ComplexPaginationContai
 export { default as Logo } from "./Logo";
 export { default as PartnersContainer } from "./PartnersContainer";
 export { default as Partner } from "./Partner";
+export { default as CardContainer } from "./CardContainer";
+export { default as Card } from "./Card";
